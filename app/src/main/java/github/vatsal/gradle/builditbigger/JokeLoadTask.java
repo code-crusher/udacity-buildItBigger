@@ -1,6 +1,7 @@
 package github.vatsal.gradle.builditbigger;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -25,14 +26,14 @@ public class JokeLoadTask extends AsyncTask<Void, Void, String> {
         if (myApiService == null) {  // Only do this once
             Jokerapi.Builder builder = new Jokerapi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
-                    .setRootUrl("https://chrome-duality-427.appspot.com//_ah/api/");
+                    .setRootUrl("https://healthy-skill-109413.appspot.com/_ah/api/");
             myApiService = builder.build();
         }
 
         try {
             return myApiService.tossMeJoke().execute().getData();
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(JokeLoadTask.class.getSimpleName(), e.getMessage());
             return null;
         }
 

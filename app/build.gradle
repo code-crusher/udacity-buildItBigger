@@ -27,4 +27,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:9.2.1'
     compile project(path: ':backend', configuration: 'android-endpoints')
     compile project(path: ':joker')
+    compile project(path: ':JokePop')
 }

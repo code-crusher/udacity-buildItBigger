@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 /**
  * Created by
@@ -28,7 +29,8 @@ public class JokePoper extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_joke_poper);
+        this.setFinishOnTouchOutside(false);
         init();
     }
 
@@ -43,6 +45,7 @@ public class JokePoper extends AppCompatActivity {
     }
 
     private void populateView(String joke) {
-
+        TextView tvJoke = (TextView) findViewById(R.id.tv_joke);
+        tvJoke.setText(joke);
     }
 }
