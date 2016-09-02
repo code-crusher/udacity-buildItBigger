@@ -8,13 +8,21 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/JokePop" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/backend" />
+            <option value="$PROJECT_DIR$/backendGCE" />
+            <option value="$PROJECT_DIR$/joker" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/JokePop" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/backend" />
+            <option value="$PROJECT_DIR$/backendGCE" />
+            <option value="$PROJECT_DIR$/joker" />
           </set>
         </option>
       </GradleProjectSettings>
