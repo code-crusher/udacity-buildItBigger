@@ -20,6 +20,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+        free { }
+        paid {
+            applicationIdSuffix ".paid"
+        }
+    }
 }
 
 dependencies {
