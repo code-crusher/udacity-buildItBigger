@@ -32,7 +32,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     // Added for AdMob
     compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.google.android.gms:play-services-ads:9.2.1'
+    freeCompile 'com.google.android.gms:play-services-ads:9.2.1'
     compile project(path: ':backend', configuration: 'android-endpoints')
     compile project(path: ':joker')
     compile project(path: ':JokePop')
