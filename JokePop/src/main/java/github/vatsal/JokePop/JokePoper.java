@@ -2,9 +2,12 @@ package github.vatsal.JokePop;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 
 /**
@@ -28,6 +31,7 @@ public class JokePoper extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joke_poper);
         this.setFinishOnTouchOutside(false);
@@ -47,5 +51,15 @@ public class JokePoper extends AppCompatActivity {
     private void populateView(String joke) {
         TextView tvJoke = (TextView) findViewById(R.id.tv_joke);
         tvJoke.setText(joke);
+    }
+
+    public void finisher(View v) {
+        finish();
+    }
+
+    public void openRepo(View v) {
+        Uri uri = Uri.parse("https://github.com/code-crusher/udacity-buildItBigger");
+        Intent openProfile = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(openProfile);
     }
 }

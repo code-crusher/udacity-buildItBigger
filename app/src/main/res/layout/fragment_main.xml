@@ -13,16 +13,18 @@
         android:id="@+id/instructions_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/instructions" />
+        android:text="@string/instructions"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/instructions_text_view"
+        android:layout_marginTop="8dp"
         android:onClick="tellJoke"
         android:text="@string/button_text"
-
-        />
+        android:textColor="@android:color/holo_red_dark" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
